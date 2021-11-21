@@ -1,6 +1,6 @@
 flask-ngrok == 0.0.25
 numpy == 1.19.5
-flask==0.12.2
+flask==1.1.4
 joblib == 1.1.0
 pandas == 1.1.5
 scikit-learn == 1.0.1
