@@ -9,7 +9,7 @@ model = joblib.load(open('crowdfundpredict_new.pkl', 'rb'))
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('crowdfundpredict.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -17,7 +17,7 @@ def index():
         description = request.form['description']
         description = [description]
         string = model.predict(description)
-        return render_template('index.html', pred=string)
+        return render_template('crowdfundpredict.html', pred=string)
 
 if __name__ == '__main__':
      app.run()
