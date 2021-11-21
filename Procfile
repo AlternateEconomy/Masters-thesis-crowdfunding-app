@@ -1,1 +1,1 @@
-web: gunicorn cam:app
+web:gunicorn cam:app
