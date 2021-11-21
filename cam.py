@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import joblib
 from flask_ngrok import run_with_ngrok
-app = Flask(__name__)
+app = Flask(__name__,template_folder='template')
 run_with_ngrok(app)
 
 model = joblib.load(open('crowdfundpredict_new.pkl', 'rb'))
